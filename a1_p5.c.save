@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main()
+{
+    unsigned int c;
+    long int x=0;
+    scanf("%ud",&c);
+    printf("The decimal representation is: %d\n",c);
+    printf("The backwards binary representation is: ");
+    while(c){
+        x<<=1;
+        x|=c&1;
+        c>>=1;
+        printf("%ld",x&1);
+    }
+    printf("\n");
+    return 0;
+}
